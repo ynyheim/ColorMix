@@ -1,0 +1,48 @@
+{
+    "name": "orangemix",
+    "displayName": "OrangeMix (Dark)",
+    "version": "0.0.1",
+    "description": "The OrangeMix color theme for Visual Studio Code",
+    "engines": {
+        "vscode": "^1.12.0"
+    },
+    "author": {
+        "name": "Yngve Hals Nyheim",
+        "url": "http://github.com/ynyheim"
+    },
+    "publisher": "ynyheim",
+    "homepage": "https://github.com/ynyheim/OrangeMix/blob/master/README.md",
+    "keywords": [
+        "visual studio code",
+        "themes",
+        "color theme",
+        "theming",
+        "extension",
+        "orange"
+    ],
+    "icon": "images/icon.png",
+	"galleryBanner": {
+		"color": "#039be5",
+		"theme": "dark"
+	},
+    "categories": [
+        "Themes"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ynyheim/OrangeMix.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ynyheim/OrangeMix/issues"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "OrangeMix",
+                "uiTheme": "vs-dark",
+                "path": "./themes/orangemix-color-theme.json"
+            }
+        ]
+    },
+    "license": "See LICENSE.txt"
+}
