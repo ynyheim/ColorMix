@@ -8,11 +8,27 @@ The reasoning behind this color theme is summarized in [Designing OrangeMix](doc
 
 > Most formatting rules in the theme are language independent and should work as long as Code has grammar support for the specified language.
 
-The theme has been used in active development using
+Examples:
 
-- **Source Code:** C#, C++, C, Typescript, JavaScript, SQL, MSIL
-- **Configuration/Data:** XML, HTML, CSS, JSON, YAML, JSX
-- **Text:** Markdown
+> C#
+
+![C#](images/csharp.png)
+
+> Markdown
+
+![Markdown](images/markdown.png)
+
+> C++
+
+![C++](images/cpp.png)
+
+> C
+
+![C](images/clang.png)
+
+> XML
+
+![XML](images/xml.png)
 
 ## Contributing
 

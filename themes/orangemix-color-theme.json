@@ -11,7 +11,6 @@
     "statusBar.background": "#7F4619",
     "statusBar.foreground": "#D1D1D1",
     "editorCursor.foreground": "#F38630",
-
     "tab.activeForeground" : "#FFF",
     "tab.activeBorderTop": "#DB792B"
   },
