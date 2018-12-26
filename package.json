@@ -1,8 +1,11 @@
 {
     "name": "orangemix",
-    "displayName": "OrangeMix (Dark)",
-    "version": "0.0.1",
+    "displayName": "OrangeMix",
+    "version": "0.2.0",
     "description": "The OrangeMix color theme for Visual Studio Code",
+    "scripts": {
+        "publish": "vsce publish"
+    },
     "engines": {
         "vscode": "^1.12.0"
     },
@@ -21,10 +24,10 @@
         "orange"
     ],
     "icon": "images/icon.png",
-	"galleryBanner": {
-		"color": "#039be5",
-		"theme": "dark"
-	},
+    "galleryBanner": {
+        "color": "#",
+        "theme": "light"
+    },
     "categories": [
         "Themes"
     ],
@@ -38,7 +41,7 @@
     "contributes": {
         "themes": [
             {
-                "label": "OrangeMix",
+                "label": "OrangeMix (Dark)",
                 "uiTheme": "vs-dark",
                 "path": "./themes/orangemix-color-theme.json"
             }

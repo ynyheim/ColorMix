@@ -2,17 +2,18 @@
   "name": "OrangeMix (Dark)",
   "type": "dark",
   "colors": {
-    "editor.background": "#1b1b1b",
+    "editor.background": "#191919",
     "editor.foreground": "#CFCFCF",
-    "editor.lineHighlightBackground": "#313131",
-    "editorIndentGuide.background": "#616161",
+    "editor.lineHighlightBackground": "#222222",
+    "editorIndentGuide.background": "#333333",
     "editor.findMatchHighlightBackground": "#7F260D",
     "editor.findMatchBackground": "#7F260D",
-    "terminal.background": "#29632E",
-    "terminal.foreground": "#c1c1c1",
     "statusBar.background": "#7F4619",
     "statusBar.foreground": "#D1D1D1",
-    "editorCursor.foreground": "#7F4619"
+    "editorCursor.foreground": "#F38630",
+
+    "tab.activeForeground" : "#FFF",
+    "tab.activeBorderTop": "#DB792B"
   },
   "tokenColors": [
     //
@@ -21,6 +22,7 @@
     {
       "name": "Source",
       "scope": [
+        "entity",
         "source",
         "meta.namespace-block.cpp",
         "variable"
@@ -39,7 +41,7 @@
         "string.quoted.docstring.multi.python"
       ],
       "settings": {
-        "foreground": "#98bb79"
+        "foreground": "#8EAB6F"
       }
     },
     {
@@ -48,29 +50,38 @@
         "keyword",
         "keyword.control",
         "keyword.control.directive.include",
-        "storage.modifier",
-        "support.function",
+        "keyword.operator.expression",
+        "keyword.operator.new",
+        "keyword.operator.asp",
         "punctuation.definition.typeparameters.begin",
         "punctuation.definition.typeparameters.end",
         "punctuation.parenthesis.open",
         "punctuation.parenthesis.close",
+        "storage.modifier",
         "storage.type.asp",
         "storage.type.js",
         "storage.type.ts",
-        "storage.type.enum.ts",
-        "support.type.primitive.ts",
-        "storage.type.class.ts",
-        "keyword.operator.expression",
-        "keyword.operator.new",
-        "keyword.operator.asp",
+        "storage.type.function",
+        "storage.type.interface",
+        "storage.type.enum",
         "storage.type.c",
+        "storage.type.class",
         "storage.type.cpp",
-        "storage.type.modifier.cpp",
+        "storage.type.modifier",
+        "storage.type.namespace",
         "storage.type.def",
-        "support.constant.property-value.css"
+        "storage.type.property",
+        "storage.type.type",
+        "support.class.builtin",
+        "support.function",
+        "support.type.primitive.ts",
+        "support.constant.property-value.css",
+        "variable.language.this",
+        "comment.block.ts storage.type.internaldeclaration.ts"
       ],
       "settings": {
-        "foreground": "#9E9E9E"
+        "foreground": "#9E9E9E",
+        "fontStyle": ""
       }
     },
     {
@@ -105,12 +116,16 @@
       }
     },
     {
-      "name": "Important Operator",
+      "name": "Important Keyword or Operator",
       "scope": [
+        "keyword.operator.optional",
         "storage.type.function.arrow.ts",
         "keyword.operator.arrow.cs",
+        "keyword.control.case.cs",
         "keyword.operator.cast.cpp",
-        "punctuation.separator.pointer-access.c"
+        "keyword.other.lock.cs",
+        "punctuation.separator.pointer-access.c",
+        "keyword.other.debugger"
       ],
       "settings": {
         "foreground": "#DB792B",
@@ -120,26 +135,26 @@
     {
       "name": "Definition",
       "scope": [
+        "entity.name.function.target.makefile",
         "entity.name.type.class",
         "entity.name.type.struct",
         "entity.name.type.interface",
         "entity.name.type.enum",
         "entity.name.type.delegate",
-        "storage.type.function.js",
-        "storage.type.function.ts",
-        "entity.name.function.target.makefile",
-        "storage.type.template.cpp",
-        "storage.type.namespace.ts"
+        "storage.type.template",
+        "entity.name.type.alias"
       ],
       "settings": {
-        "foreground": "#F38630",
+        "foreground": "#DB792B",
         "fontStyle": "underline"
       }
     },
     {
       "name": "Generic Type Definition",
       "scope": [
-        "entity.name.type.type-parameter"
+        "entity.name.type.type-parameter",
+        "meta.type.parameters",
+        "meta.type.parameters.ts"
       ],
       "settings": {
         "foreground": "#039be5"
@@ -149,20 +164,41 @@
       "name": "Type",
       "scope": [
         "storage.type",
-        "entity.name.type.alias",
-        "entity.name.type.cpp"
+        "support.class",
+        "entity.other.inherited-class",
+        "entity.name.type.inherited.cpp",
+        "meta.class-struct-block.cpp entity.name.type.cpp",
+        "meta.parameters.ts entity.name.type.ts",
+        "meta.field.declaration.ts entity.name.type.ts",
+        "meta.return.type.ts entity.name.type.ts",
+        "new.expr.ts entity.name.type.ts",
+        "meta.type.annotation.ts entity.name.type.ts"
       ],
       "settings": {
-        "foreground": "#DB792B"
+        "foreground": "#D66E1C"
       }
     },
     {
-      "name": "Function",
+      "name": "Class Member Definition",
       "scope": [
-        "entity.name.function"
+        "entity.name.variable.property.cs",
+        "meta.class.ts meta.method.declaration.ts meta.definition.method.ts",
+        "meta.class.ts meta.function.ts meta.definition.function.ts",
+        "meta.class.ts meta.field.declaration.ts meta.definition.property.ts",
+        "meta.function.ts meta.definition.function.ts"
       ],
       "settings": {
-        "foreground": "#e0e0e0"
+        "foreground": "#C77C4F"
+      }
+    },
+    {
+      "name": "Conditional Case",
+      "scope": [
+        "case-clause.expr.ts variable.other.constant.property.ts",
+        "case-clause.expr.ts variable.other.property.ts"
+      ],
+      "settings": {
+        "foreground": "#BA951C"
       }
     },
     {
@@ -196,16 +232,22 @@
     {
       "name": "Constant Null",
       "scope": [
-        "constant.language.null"
+        "constant.language.null",
+        "constant.language.undefined",
+        "keyword.operator.null-coalescing.cs",
+        "keyword.operator.null-conditional.cs"
       ],
       "settings": {
-        "foreground": "#D54016"
+        "foreground": "#E24417",
+        "fontStyle": ""
       }
     },
     {
       "name": "String",
       "scope": [
-        "string"
+        "string",
+        "punctuation.definition.string.begin.cs",
+        "punctuation.definition.string.end.cs"
       ],
       "settings": {
         "foreground": "#BA951C"
@@ -216,7 +258,8 @@
       "scope": [
         "punctuation.definition.interpolation.begin",
         "punctuation.definition.interpolation.end",
-        "constant.character.escape"
+        "constant.character.escape",
+        "string.template.ts punctuation.definition.template-expression"
       ],
       "settings": {
         "foreground": "#DB792B"
@@ -232,6 +275,16 @@
       }
     },
     {
+      "name": "Regexp Group",
+      "scope": [
+        "punctuation.definition.group.regexp"
+      ],
+      "settings": {
+        "foreground": "#039be5",
+        "fontStyle": "bold"
+      }
+    },
+    {
       "name": "Regexp Operator",
       "scope": [
         "keyword.operator.quantifier.regexp",
@@ -239,7 +292,8 @@
         "keyword.operator.negation.regexp"
       ],
       "settings": {
-        "foreground": "#F38630"
+        "foreground": "#26c6da",
+        "fontStyle": "bold"
       }
     },
     {
@@ -275,8 +329,7 @@
         "entity.name.function.preprocessor"
       ],
       "settings": {
-        "foreground": "#26c6da",
-        "fontStyle": "bold"
+        "foreground": "#26c6da"
       }
     },
     {
@@ -316,7 +369,7 @@
         "entity.other.attribute-name.class.css"
       ],
       "settings": {
-        "foreground": "#DB792B"
+        "foreground": "#D66E1C"
       }
     },
     {
@@ -348,7 +401,7 @@
         "constant.language.json"
       ],
       "settings": {
-        "foreground": "#F38630"
+        "foreground": "#D66E1C"
       }
     },
     {
@@ -366,7 +419,7 @@
         "string.quoted.double.json.comments"
       ],
       "settings": {
-        "foreground": "#BDA95B"
+        "foreground": "#BA951C"
       }
     },
     {
@@ -382,6 +435,7 @@
     {
       "name": "SGML Punctation",
       "scope": [
+        "entity.name.tag",
         "meta.tag",
         "punctuation.definition.tag",
         "punctuation.definition.string.begin.xml",
@@ -400,7 +454,28 @@
         "entity.other.attribute-name.localname"
       ],
       "settings": {
-        "foreground": "#c0c0c0"
+        "foreground": "#C77C4F"
+      }
+    },
+    {
+      "name": "SGML Attribute Value",
+      "scope": [
+        "string.quoted.double.xml",
+        "string.quoted.double.html",
+        "meta.jsx.children"
+      ],
+      "settings": {
+        "foreground": "#C6C6C6"
+      }
+    },
+    {
+      "name": "SGML Preprocessor Attribute Value",
+      "scope": [
+        "meta.tag.preprocessor.xml string.quoted.double.xml",
+        "meta.tag.preprocessor.xml string.quoted.double.html"
+      ],
+      "settings": {
+        "foreground": "#26c6da"
       }
     },
     {
@@ -411,17 +486,14 @@
         "entity.other.attribute-name.namespace"
       ],
       "settings": {
-        "foreground": "#DB792B"
+        "foreground": "#D66E1C"
       }
     },
     {
       "name": "SGML Content",
       "scope": [
-        "string.quoted.double.xml",
-        "string.quoted.double.html",
         "text.xml",
-        "text.html",
-        "meta.jsx.children"
+        "text.html"
       ],
       "settings": {
         "foreground": "#BDA95B"
@@ -443,7 +515,7 @@
         "entity.name.section.group-title.ini"
       ],
       "settings": {
-        "foreground": "#F38630"
+        "foreground": "#D66E1C"
       }
     },
     //
@@ -465,7 +537,8 @@
         "entity.name.section.markdown"
       ],
       "settings": {
-        "foreground": "#DB792B"
+        "foreground": "#D1D1D1",
+        "fontStyle": "bold"
       }
     },
     {
@@ -492,25 +565,36 @@
         "markup.quote.markdown"
       ],
       "settings": {
-        "foreground": "#BDA95B"
+        "foreground": "#C96F28"
       }
     },
     {
       "name": "Text Inline Code",
       "scope": [
-        "markup.inline.raw.string.markdown"
+        "markup.inline.raw.string.markdown",
+        "text.aspnetcorerazor"
       ],
       "settings": {
-        "foreground": "#ffab91"
+        "foreground": "#BDA95B"
       }
     },
     {
-      "name": "Text Inline Code Block",
+      "name": "Text Code Block Punctation",
       "scope": [
         "punctuation.definition.markdown"
       ],
       "settings": {
-        "foreground": "#ffab91"
+        "foreground": "#039be5",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Text Code Block Category",
+      "scope": [
+        "fenced_code.block.language"
+      ],
+      "settings": {
+        "foreground": "#26c6da"
       }
     },
     {
@@ -521,7 +605,7 @@
         "punctuation.definition.string.end.markdown"
       ],
       "settings": {
-        "foreground": "#7AB7FA"
+        "foreground": "#D66E1C"
       }
     },
     {
