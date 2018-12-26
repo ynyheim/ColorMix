@@ -14,6 +14,10 @@ Examples:
 
 ![C#](images/csharp.png)
 
+> TypeScript
+
+![TypeScript](images/typescript.png)
+
 > Markdown
 
 ![Markdown](images/markdown.png)
