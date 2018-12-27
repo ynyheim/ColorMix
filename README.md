@@ -1,4 +1,4 @@
-# OrangeMix
+# ![Icon](images/icon.png)  
 
 This is OrangeMix, a dark color theme based on the color orange.
 
