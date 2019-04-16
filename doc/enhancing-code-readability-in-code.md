@@ -45,7 +45,7 @@ Specifically for C#, Code exhibits the following shortcomings:
 
 - Different keywords are always scoped as "storage.modifier". This makes it impossible to have some keywords stand out.
 
-> It would be nice to have certain keywords such as `unchecked` and `unsafe` stand out. This is currently not possible AFAIK.
+> It would be nice to have certain keywords such as `unsafe` stand out. This is currently not possible AFAIK (Note: version 1.0.3 now makes `unchecked` stand out).
 
 - Function definitions and function calls are always scoped as `entity.name.function.cs`.
 

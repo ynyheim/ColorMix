@@ -52,6 +52,7 @@
         "keyword.operator.expression",
         "keyword.operator.new",
         "keyword.operator.asp",
+        "keyword.operator.arrow",
         "punctuation.definition.typeparameters.begin",
         "punctuation.definition.typeparameters.end",
         "punctuation.parenthesis.open",
@@ -88,7 +89,8 @@
       "scope": [
         "meta.preprocessor.diagnostic",
         "keyword.other.important.css",
-        "meta.tag.metadata.script"
+        "meta.tag.metadata.script",
+        "keyword.other.unchecked.cs"
       ],
       "settings": {
         "foreground": "#D54016"
@@ -119,20 +121,19 @@
       "scope": [
         "keyword.operator.optional",
         "storage.type.function.arrow.ts",
-        "keyword.operator.arrow.cs",
-        "keyword.control.case.cs",
         "keyword.operator.cast.cpp",
         "keyword.other.lock.cs",
         "punctuation.separator.pointer-access.c",
-        "keyword.other.debugger"
+        "keyword.other.debugger",
+        "keyword.control.goto.cs"
       ],
       "settings": {
-        "foreground": "#DB792B",
+        "foreground": "#F57C00",
         "fontStyle": ""
       }
     },
     {
-      "name": "Definition",
+      "name": "Type Definition",
       "scope": [
         "entity.name.function.target.makefile",
         "entity.name.type.class",
@@ -144,7 +145,7 @@
         "entity.name.type.alias"
       ],
       "settings": {
-        "foreground": "#DB792B",
+        "foreground": "#F57C00",
         "fontStyle": "underline"
       }
     },
@@ -193,11 +194,33 @@
     {
       "name": "Conditional Case",
       "scope": [
+        "keyword.control.case.cs",
+        "keyword.control.default.cs",
+        "keyword.control.flow.continue",
         "case-clause.expr.ts variable.other.constant.property.ts",
         "case-clause.expr.ts variable.other.property.ts"
       ],
       "settings": {
-        "foreground": "#BA951C"
+        "foreground": "#EB9117"
+      }
+    },
+    {
+      "name": "Conditional Label",
+      "scope": [
+        "entity.name.label.cs"
+      ],
+      "settings": {
+        "foreground": "#1DA0F0"
+      }
+    },
+    {
+      "name": "Conditional Operators",
+      "scope": [
+        "keyword.operator.conditional",
+      ],
+      "settings": {
+        "foreground": "#F57C00",
+        "fontStyle": ""
       }
     },
     {
@@ -242,6 +265,24 @@
       }
     },
     {
+      "name": "Character",
+      "scope": [
+        "string.quoted.single"
+      ],
+      "settings": {
+        "foreground": "#A6FF82"
+      }
+    },
+    {
+      "name": "Character Escaped",
+      "scope": [
+        "constant.character.escape"
+      ],
+      "settings": {
+        "foreground": "#6BE871"
+      }
+    },
+    {
       "name": "String",
       "scope": [
         "string",
@@ -253,11 +294,10 @@
       }
     },
     {
-      "name": "String Escape",
+      "name": "String Interpolated",
       "scope": [
         "punctuation.definition.interpolation.begin",
         "punctuation.definition.interpolation.end",
-        "constant.character.escape",
         "string.template.ts punctuation.definition.template-expression"
       ],
       "settings": {
@@ -389,6 +429,15 @@
       ],
       "settings": {
         "foreground": "#5B7148"
+      }
+    },
+    {
+      "name": "C# Function",
+      "scope": [
+        "entity.name.function.cs"
+      ],
+      "settings": {
+        "foreground": "#EFEFEF"
       }
     },
     //
